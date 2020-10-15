@@ -19,13 +19,15 @@ namespace Service
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            /*
             //Forwarded Headers Middleware KnownProxies
             services.Configure<ForwardedHeadersOptions>(options =>
             {
                 //options.KnownProxies.Add(IPAddress.Parse("10.0.0.100"));
                 options.KnownProxies.Add(IPAddress.Any);
             });
-
+            */
+            
             services.AddGrpc();
             services.AddGrpcReflection();
 
@@ -50,12 +52,14 @@ namespace Service
                 
             }
 
+            /*
             //for reverse proxy server nginx, since its reverse forwarded
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
-
+            */
+            
             app.UseRouting();
             app.UseGrpcWeb();
             ////below line will enable all service as web grpc
