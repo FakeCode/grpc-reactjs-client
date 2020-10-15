@@ -1,6 +1,5 @@
-# grpc-reactjs-client
-# gRPC Asp.net Core + Reactjs
-implementation of grpc in asp.net core, reactjs client including both typescript and js app
+# gRPC Asp.net Core + Reactjs, bonus redis as distributed caching.
+implementation of grpc in asp.net core, reactjs client including both typescript and js app.
 Lot of talks on gRPC and Its awesome. I have created small boilertype project which demonstrate how to create grpc service for asp.net core, created protos for javascript and typescript, tested using grpcui utility tool. Consumed gRPC service on both server side and client side applications.
 
 Asp.net 3.1 has experimental proxy for web i.e Grpc.AspNetCore.Web, thats mean you don't need extra proxy server like envoy.
