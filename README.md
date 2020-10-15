@@ -29,3 +29,6 @@ endpoints.MapGrpcService<Service>().RequireCors(AuthenticatorConstants.CorsPolic
 2) $ protoc -I=./proto ./proto/student.proto --js_out=import_style=commonjs:./proto --grpc-web_out=import_style=commonjs,mode=grpcwebtext:./proto
 ## for typescript generate:
 3) $ protoc -I=./proto ./proto/student.proto --js_out=import_style=commonjs:./proto --grpc-web_out=import_style=typescript,mode=grpcwebtext:./proto
+
+you may get an error on client side protos file, if so then please disable lint
+/* eslint-disable */
