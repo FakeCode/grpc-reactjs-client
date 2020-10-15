@@ -25,7 +25,7 @@ endpoints.MapGrpcService<Service>().RequireCors(AuthenticatorConstants.CorsPolic
 4) https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-3.1
 
 #generate protos for client app: (I have used both js and typescript proto in app and clientApp)
-download protoc (protoc-3.13.0-win64) and generate either java script or typescript
-$ protoc -I=./proto ./proto/student.proto --js_out=import_style=commonjs:./proto --grpc-web_out=import_style=commonjs,mode=grpcwebtext:./proto
-for typescript generate:
-$ protoc -I=./proto ./proto/student.proto --js_out=import_style=commonjs:./proto --grpc-web_out=import_style=typescript,mode=grpcwebtext:./proto
+1) download protoc (protoc-3.13.0-win64) and generate either java script or typescript
+2) $ protoc -I=./proto ./proto/student.proto --js_out=import_style=commonjs:./proto --grpc-web_out=import_style=commonjs,mode=grpcwebtext:./proto
+## for typescript generate:
+3) $ protoc -I=./proto ./proto/student.proto --js_out=import_style=commonjs:./proto --grpc-web_out=import_style=typescript,mode=grpcwebtext:./proto
