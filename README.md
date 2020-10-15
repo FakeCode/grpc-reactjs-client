@@ -17,6 +17,7 @@ Or
 endpoints.MapGrpcService<Service>().RequireCors(AuthenticatorConstants.CorsPolicyName).EnableGrpcWeb();//as of now we are allowing all but need to restrict origin
 ### service.contract
 I have created Service.Contract to share protos for server side application, add gRPC service reference and select proto files from gRPC service. I like this way to share service on to multiple application.
+Keep it mind, we are generating protos for both Client and Server, so please select the Client and Server type of class before you add it in contract project.
 
 #references:
 1) https://github.com/grpc-ecosystem/awesome-grpc
