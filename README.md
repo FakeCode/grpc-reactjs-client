@@ -23,6 +23,7 @@ endpoints.MapGrpcService<Service>().RequireCors(AuthenticatorConstants.CorsPolic
 2) https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/grpc
 3) https://github.com/fullstorydev/grpcui/cmd/grpcui
 4) https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-3.1
+5) https://medium.com/net-core/in-memory-distributed-redis-caching-in-asp-net-core-62fb33925818
 
 #generate protos for client app: (I have used both js and typescript proto in app and clientApp)
 1) download protoc (protoc-3.13.0-win64) and generate either java script or typescript
