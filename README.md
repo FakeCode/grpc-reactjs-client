@@ -16,7 +16,8 @@ and Grpc.AspNetCore.Server.Reflection to discover grpc service
 app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
 Or
 endpoints.MapGrpcService<Service>().RequireCors(AuthenticatorConstants.CorsPolicyName).EnableGrpcWeb();//as of now we are allowing all but need to restrict origin
-               
+### service.contract
+I have created Service.Contract to share protos for server side application, add gRPC service reference and select proto files from gRPC service. I like this way to share service on to multiple application.
 
 #references:
 1) https://github.com/grpc-ecosystem/awesome-grpc
@@ -33,3 +34,6 @@ endpoints.MapGrpcService<Service>().RequireCors(AuthenticatorConstants.CorsPolic
 
 you may get an error on client side protos file, if so then please disable lint
 /* eslint-disable */
+
+
+
